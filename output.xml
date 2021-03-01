@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on darwin)" generated="20210225 21:22:39.131" rpa="false">
+<suite id="s1" name="TC4 Lead CRM" source="/Users/Severus/PycharmProjects/pythonProject/Testcase/TC4_Lead_CRM.robot">
+<test id="s1-t1" name="1. Valid Login Page">
+<kw name="Open Browser To Login Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210225 21:22:39.357" level="INFO">Opening browser 'Chrome' to base url 'https://sg.younetsi.com/'.</msg>
+<status status="PASS" starttime="20210225 21:22:39.356" endtime="20210225 21:22:41.907"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Authorization</arg>
+</arguments>
+<msg timestamp="20210225 21:22:41.912" level="INFO">Page title is 'Authorization'.</msg>
+<status status="PASS" starttime="20210225 21:22:41.907" endtime="20210225 21:22:41.912"></status>
+</kw>
+<status status="PASS" starttime="20210225 21:22:39.356" endtime="20210225 21:22:41.912"></status>
+</kw>
+<kw name="Input Username">
+<arguments>
+<arg>admin</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>USER_LOGIN</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210225 21:22:41.913" level="INFO">Typing text 'admin' into text field 'USER_LOGIN'.</msg>
+<status status="PASS" starttime="20210225 21:22:41.913" endtime="20210225 21:22:42.002"></status>
+</kw>
+<status status="PASS" starttime="20210225 21:22:41.913" endtime="20210225 21:22:42.002"></status>
+</kw>
+<kw name="Input Password">
+<arguments>
+<arg>demo@1234</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>USER_PASSWORD</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20210225 21:22:42.003" level="INFO">Typing text 'demo@1234' into text field 'USER_PASSWORD'.</msg>
+<status status="PASS" starttime="20210225 21:22:42.003" endtime="20210225 21:22:42.075"></status>
+</kw>
+<status status="PASS" starttime="20210225 21:22:42.002" endtime="20210225 21:22:42.075"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="login-popup"]/form/div[2]/input</arg>
+</arguments>
+<msg timestamp="20210225 21:22:42.076" level="INFO">Clicking button '//*[@id="login-popup"]/form/div[2]/input'.</msg>
+<status status="PASS" starttime="20210225 21:22:42.076" endtime="20210225 21:22:45.012"></status>
+</kw>
+<status status="PASS" starttime="20210225 21:22:42.076" endtime="20210225 21:22:45.012"></status>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>(9) Leads</arg>
+</arguments>
+<msg timestamp="20210225 21:22:45.016" level="INFO">Page title is '(9) Leads'.</msg>
+<status status="PASS" starttime="20210225 21:22:45.013" endtime="20210225 21:22:45.016"></status>
+</kw>
+<status status="PASS" starttime="20210225 21:22:45.012" endtime="20210225 21:22:45.016"></status>
+</kw>
+<kw name="Open CRM Lead">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="bx_left_menu_menu_crm_favorite"]/a</arg>
+</arguments>
+<msg timestamp="20210225 21:22:45.017" level="INFO">Clicking link '//*[@id="bx_left_menu_menu_crm_favorite"]/a'.</msg>
+<status status="PASS" starttime="20210225 21:22:45.017" endtime="20210225 21:22:47.079"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="toolbar_lead_list_button_0_anchor"]/a</arg>
+</arguments>
+<msg timestamp="20210225 21:22:47.079" level="INFO">Clicking link '//*[@id="toolbar_lead_list_button_0_anchor"]/a'.</msg>
+<status status="PASS" starttime="20210225 21:22:47.079" endtime="20210225 21:22:47.187"></status>
+</kw>
+<status status="PASS" starttime="20210225 21:22:45.017" endtime="20210225 21:22:47.188"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>https://sg.younetsi.com/crm/lead/details/0/</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210225 21:22:52.871" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210225 21:22:52.387" endtime="20210225 21:22:52.871"></status>
+</kw>
+<msg timestamp="20210225 21:22:52.876" level="FAIL">Text 'https://sg.younetsi.com/crm/lead/details/0/' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20210225 21:22:47.188" endtime="20210225 21:22:52.876"></status>
+</kw>
+<status status="FAIL" starttime="20210225 21:22:39.355" endtime="20210225 21:22:52.876" critical="yes">Text 'https://sg.younetsi.com/crm/lead/details/0/' did not appear in 5 seconds.</status>
+</test>
+<doc>Test New Form</doc>
+<status status="FAIL" starttime="20210225 21:22:39.133" endtime="20210225 21:22:52.878"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="TC4 Lead CRM">TC4 Lead CRM</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
